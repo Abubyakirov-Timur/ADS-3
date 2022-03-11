@@ -1,7 +1,6 @@
 // Copyright 2021 NNTU-CS
 
 int cbinsearch(int *arr, int size, int value) {
-  //  поместить сюда реализацию алгоритма
   void quickSort(int *arr, int first, int last) {
     if (first < last) {
       int left = first, right = last;
@@ -49,5 +48,5 @@ int cbinsearch(int *arr, int size, int value) {
         left = mid + 1;
         }
     }
-  return 0; // если ничего не найдено
+  return 0;
 }
