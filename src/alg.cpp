@@ -3,27 +3,27 @@
 int cbinsearch(int *arr, int size, int value) {
   //  поместить сюда реализацию алгоритма
   void quickSort(int *arr, int first, int last) {
-  if (first < last) {
-    int left = first, right = last;
-    int midle = arr[(left + right) / 2];
-    do {
-      while (arr[left] < midle) {
-        ++left;
-      }
-      while (arr[right] > midle) {
-        --right;
-      }
-      if (left <= right) {
-        int Temp = arr[left];
-        arr[left] = arr[right];
-        arr[right] = Temp;
-        ++left;
-        --right;
-      }
-    } while (left < right);
-    quickSort(arr, first, right);
-    quickSort(arr, left, last);
-  }
+    if (first < last) {
+      int left = first, right = last;
+      int midle = arr[(left + right) / 2];
+      do {
+        while (arr[left] < midle) {
+          ++left;
+        }
+        while (arr[right] > midle) {
+          --right;
+        }
+        if (left <= right) {
+          int Temp = arr[left];
+          arr[left] = arr[right];
+          arr[right] = Temp;
+          ++left;
+          --right;
+        }
+      } while (left < right);
+      quickSort(arr, first, right);
+      quickSort(arr, left, last);
+    }
   return;
 }
 
@@ -45,9 +45,9 @@ int cbinsearch(int *arr, int size, int value) {
       return count;
     } else if (arr[mid] > value) {
       right = mid;
-    } else {
-      left = mid + 1;
+      } else {
+        left = mid + 1;
+        }
     }
-  }
   return 0; // если ничего не найдено
 }
