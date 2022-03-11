@@ -1,6 +1,5 @@
 // Copyright 2021 NNTU-CS
 
-int cbinsearch(int *arr, int size, int value) {
   void quickSort(int *arr, int first, int last) {
     if (first < last) {
       int left = first, right = last;
@@ -23,7 +22,7 @@ int cbinsearch(int *arr, int size, int value) {
       quickSort(arr, first, right);
       quickSort(arr, left, last);
     }
-  return;
+    return;
 }
 
 int cbinsearch(int *arr, int size, int value) {
@@ -44,9 +43,9 @@ int cbinsearch(int *arr, int size, int value) {
       return count;
     } else if (arr[mid] > value) {
       right = mid;
-      } else {
-        left = mid + 1;
-        }
+    } else {
+      left = mid + 1;
     }
+  }
   return 0;
 }
